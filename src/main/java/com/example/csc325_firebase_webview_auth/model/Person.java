@@ -4,6 +4,9 @@
  */
 package com.example.csc325_firebase_webview_auth.model;
 
+import javafx.beans.property.SimpleStringProperty;
+import javafx.beans.property.*;
+
 /**
  *
  * @author MoaathAlrajab
@@ -16,40 +19,21 @@ package com.example.csc325_firebase_webview_auth.model;
  *
  */
 public class Person {
-    private String name;
-    private String major;
-    private int age;
+    private final StringProperty name;
+    private final StringProperty major;
+    private final IntegerProperty age;
 
     public Person(String name, String major, int age) {
-        this.name = name;
-        this.major = major;
-        this.age = age;
+        this.name = new SimpleStringProperty(name);
+        this.major = new SimpleStringProperty(major);
+        this.age = new SimpleIntegerProperty(age);
     }
 
-    public String getName() {
-        return name;
-    }
+    public StringProperty nameProperty() { return name; }
+    public StringProperty majorProperty() { return major; }
+    public IntegerProperty ageProperty() { return age; }
 
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public String getMajor() {
-        return major;
-    }
-
-    public void setMajor(String major) {
-        this.major = major;
-    }
-
-    public int getAge() {
-        return age;
-    }
-
-    public void setAge(int age) {
-        this.age = age;
-    }
-    
-    
-    
+    public String getName() { return name.get(); }
+    public String getMajor() { return major.get(); }
+    public int getAge() { return age.get(); }
 }
