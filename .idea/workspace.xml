@@ -21,6 +21,7 @@
       <change beforePath="$PROJECT_DIR$/target/classes/com/example/csc325_firebase_webview_auth/view/WebContainerController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/csc325_firebase_webview_auth/view/WebContainerController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/files/AccessFBView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/files/AccessFBView.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/module-info.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/module-info.class" afterDir="false" />
+
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -51,6 +52,7 @@
     &quot;accountId&quot;: &quot;9bbf1845-6672-4ff7-9d9e-b65229fdea5c&quot;
   }
 }</component>
+
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 5
 }</component>
@@ -66,10 +68,6 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "git-widget-placeholder": "working",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/Duque/CSC325_Firebase_webview_Auth_StarterCode",
-    "list.type.of.created.stylesheet": "CSS",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -176,9 +174,6 @@
       <workItem from="1710690942533" duration="7228000" />
       <workItem from="1710732741753" duration="608000" />
       <workItem from="1710733353801" duration="5503000" />
-      <workItem from="1750893216219" duration="1070000" />
-      <workItem from="1750897439658" duration="1939000" />
-      <workItem from="1750967590980" duration="6051000" />
     </task>
     <task id="LOCAL-00001" summary="reduce Java version to 17">
       <option name="closed" value="true" />
