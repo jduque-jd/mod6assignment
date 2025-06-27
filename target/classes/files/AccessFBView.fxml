@@ -71,9 +71,9 @@
             </VBox>
             <VBox prefHeight="535.0" prefWidth="241.0" spacing="10.0">
                <children>
-                  <TextField fx:id="nameField" alignment="TOP_LEFT" prefHeight="25.0" prefWidth="272.0" text="Name" />
-                  <TextField fx:id="majorField" text="Major" />
-                  <TextField fx:id="ageField" text="Age" />
+                  <TextField fx:id="nameField" alignment="TOP_LEFT" prefHeight="25.0" prefWidth="272.0" promptText="Name" />
+                  <TextField fx:id="majorField" promptText="Major" />
+                  <TextField fx:id="ageField" promptText="Age" />
                   <HBox prefHeight="32.0" prefWidth="465.0">
                      <children>
                         <Button fx:id="readButton" mnemonicParsing="false" onAction="#readRecord" prefHeight="25.0" prefWidth="123.0" text="Read" textAlignment="CENTER">
