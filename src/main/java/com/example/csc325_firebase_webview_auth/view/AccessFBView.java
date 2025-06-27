@@ -30,6 +30,10 @@ public class AccessFBView {
     public TableColumn<Person, String> nameColumn;
     public TableColumn<Person, String> majorColumn;
     public TableColumn<Person, Integer> ageColumn;
+    private TextField emailField;
+    private TextField phoneField;
+    private TextField usernameField;
+    private PasswordField passwordField;
     @FXML
     private TextField nameField;
     @FXML
@@ -76,7 +80,11 @@ public class AccessFBView {
 
     @FXML
     private void regRecord(ActionEvent event) {
-        registerUser();
+        String email = emailField.getText().trim();
+        String phone = phoneField.getText().trim();
+        String password = passwordField.getText().trim();
+        String name = usernameField.getText().trim();
+        registerUser(email, phone, password, name);
     }
 
     @FXML
@@ -131,25 +139,40 @@ public class AccessFBView {
         }
     }
 
-    public boolean registerUser() {
+    public boolean registerUser(String usrname, String pass, String phoneNumber, String email) {
+        if(email.isEmpty() || !email.contains("@")) {
+            showAlert("Invalid email address", "Please enter a valid email address");
+            return false;
+        }
+        if(pass.length() < 6 || pass.length() > 16) {
+            showAlert("Invalid password", "Please enter a valid password");
+            return false;
+        }
+        email = email.trim();
         UserRecord.CreateRequest request = new UserRecord.CreateRequest()
-                .setEmail("user@example.com")
+                .setEmail(email)
                 .setEmailVerified(false)
-                .setPassword("secretPassword")
-                .setPhoneNumber("+11234567890")
-                .setDisplayName("John Doe")
+                .setPassword(pass)
+                .setPhoneNumber(phoneNumber)
+                .setDisplayName(usrname)
                 .setDisabled(false);
 
         UserRecord userRecord;
         try {
             userRecord = App.fauth.createUser(request);
-            System.out.println("Successfully created new user: " + userRecord.getUid());
+            showAlert("Success!", "User created successfully");
             return true;
 
         } catch (FirebaseAuthException ex) {
-            // Logger.getLogger(FirestoreContext.class.getName()).log(Level.SEVERE, null, ex);
+            showAlert("Failed to create user", ex.getMessage());
             return false;
         }
 
+    }
+    private void showAlert(String title, String message) {
+        Alert alert = new Alert(Alert.AlertType.INFORMATION, message, ButtonType.OK);
+        alert.setTitle(title);
+        alert.setHeaderText(null);
+        alert.showAndWait();
     }
 }

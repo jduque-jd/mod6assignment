@@ -1,6 +1,26 @@
-#titleLabel{
-
+.menu-bar{
+    -fx-background-color: #8f3e00;
 }
-#splashRoot{
 
+.button {
+    -fx-background-color: #B36B00;
+    -fx-text-fill: white;
+    -fx-font-size: 14px;
+    -fx-background-radius: 10;
+}
+
+.table-view {
+    -fx-background-color: white;
+}
+
+.table-column-header-background{
+    -fx-background-color: #AAAAAA;
+}
+#right-box{
+    -fx-background-color: #7FFF00;
+    -fx-padding: 10 10 10 10;
+}
+#left-box{
+    -fx-background-color: #B36b00;
+    -fx-padding: 10 10 10 10;
 }
